@@ -119,5 +119,11 @@ export class Pessoa {
         // lógica de negócio
         console.log(`${this.nome} comeu ${prato}`);
     }
+
+    /*  CRUD */
+
+     cadastroPessoa(pessoa:Pessoa){
+        console.log(`${pessoa.nome} cadastrado com sucesso`);
+     }
 }
 

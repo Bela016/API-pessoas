@@ -101,6 +101,10 @@ class Pessoa {
         // lógica de negócio
         console.log(`${this.nome} comeu ${prato}`);
     }
+    /*  CRUD */
+    cadastroPessoa(pessoa) {
+        console.log(`${pessoa.nome} cadastrado com sucesso`);
+    }
 }
 exports.Pessoa = Pessoa;
 //# sourceMappingURL=pessoa.js.map
