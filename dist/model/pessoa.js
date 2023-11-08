@@ -107,4 +107,4 @@ class Pessoa {
     }
 }
 exports.Pessoa = Pessoa;
-//# sourceMappingURL=Pessoa.js.map
+//# sourceMappingURL=pessoa.js.map

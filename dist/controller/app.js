@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
-const Pessoa_1 = require("../model/Pessoa");
+const pessoa_1 = require("../model/pessoa");
 const bancoDeDados_1 = require("./bancoDeDados");
 // Inicializa uma lista de pessoas
 (0, bancoDeDados_1.inicializarPessoas)();
@@ -37,7 +37,7 @@ app.post('/cadastro', (req, res) => {
     // Recuperando as informações JSON que vieram no corpo (body) da requisição (req) e desestruturando essa informação para cada atributo
     const { nome, cpf, data_nascimento, telefone, endereco, altura, peso } = req.body;
     // Criando um novo objeto do tipo Pessoa com as informações recuperadas da requisição
-    const pessoa = new Pessoa_1.Pessoa(nome, cpf, new Date(data_nascimento), telefone, endereco, altura, peso);
+    const pessoa = new pessoa_1.Pessoa(nome, cpf, new Date(data_nascimento), telefone, endereco, altura, peso);
     // Apenas imprimindo as informações do objeto no console do servidor
     console.log(pessoa);
     // Chamando a função para persistir (salvar) os dados da pessoa no banco de dados

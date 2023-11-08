@@ -1,6 +1,6 @@
 import express from "express";
 import cors from 'cors';
-import { Pessoa } from "../model/Pessoa";
+import { Pessoa } from "../model/pessoa";
 import { inicializarPessoas, listarPessoas, persistirPessoa } from "./bancoDeDados";
 
 // Inicializa uma lista de pessoas
@@ -51,7 +51,7 @@ app.post('/cadastro', (req, res) => {
 
     // Chamando a função para persistir (salvar) os dados da pessoa no banco de dados
     persistirPessoa(pessoa);
-    
+
 
     // Resposta que o servidor irá enviar ao front-end (A resposta será estrutura em um JSON)
     res.json({ mensagem: "Pessoa cadastrada com sucesso" })
